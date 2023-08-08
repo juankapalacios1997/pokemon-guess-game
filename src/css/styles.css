@@ -1,0 +1,88 @@
+html, body {
+    background-color: #f1f1f1;
+    margin: 0px;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.pokemon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 16px 0 32px;
+    height: 360px;
+}
+
+.hidden-pokemon {
+    filter: brightness(0);
+}
+
+img {
+    height: 360px;
+    position: absolute;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* Pokemon Options */
+
+.options-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+ul {
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+}
+li {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.button-li {
+    margin-top: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(250, 120, 0);
+    background-color: rgb(250, 150, 50);
+}
+
+.button-li:hover {
+    background-color: rgb(250, 135, 0);
+}
+
+.button-li button {
+    background-color: transparent;
+    border: none;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
