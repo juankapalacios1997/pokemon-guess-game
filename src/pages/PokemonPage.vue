@@ -2,7 +2,7 @@
     <div class="main-container">
         <h1 v-if="!pokemon">Por favor, espere</h1>
         <div v-else>
-            <h1>¿Quién es este Pokemon?</h1>
+            <h1>{{$t('main-message')}}</h1>
             <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
             <h2 v-if="showMessage" class="message">{{  message }}</h2>
             <PokemonOptions :pokemonOptions="pokemonArr" @selection="handleSelection" @clickNewGame="newGame"/>
@@ -27,7 +27,21 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 pokemonArr: [],
                 showPokemon: false,
                 showMessage: false,
-                message: ''
+                message: '',
+                missMessages: [
+                    this.$t('miss-messages.message1'),
+                    this.$t('miss-messages.message2'),
+                    this.$t('miss-messages.message3'),
+                    this.$t('miss-messages.message4'),
+                    this.$t('miss-messages.message5'),
+                ],
+                hitMessages: [
+                    this.$t('hit-messages.message1'),
+                    this.$t('hit-messages.message2'),
+                    this.$t('hit-messages.message3'),
+                    this.$t('hit-messages.message4'),
+                    this.$t('hit-messages.message5'),
+                ]
             }
         },
         methods: {
@@ -40,9 +54,9 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
             handleSelection(id) {
                 this.showPokemon = true;
                 if(id === this.pokemon.id) {  
-                    this.message = `¡Acertaste! Es ${this.pokemon.name}`
+                    this.message = `${this.hitMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
                 } else {
-                    this.message = `¡Suerte para la próxima! ¡Es ${this.pokemon.name}!`
+                    this.message = `${this.missMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
                 }
                 this.showMessage = true
             },

@@ -1,0 +1,17 @@
+{
+    "main-message": "Who's that Pokemon?",
+    "hit-messages": {
+        "message1": "Great! It's ",
+        "message2": "You're really good at this! It's ",
+        "message3": "You hit it! It's ",
+        "message4": "Awesome! It's ",
+        "message5": "You're on fire! It's "
+    },
+    "miss-messages": {
+        "message1": "So close! It's ",
+        "message2": "You were gettin' hot! It's ",
+        "message3": "Almost hit it! It's ",
+        "message4": "Better luck next time! It's ",
+        "message5": "Don't you give up! It's "
+    }
+}

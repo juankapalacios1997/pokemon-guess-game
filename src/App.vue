@@ -1,14 +1,17 @@
 <template>
+  <selectLanguage />
   <PokemonPage />
 </template>
 
 <script>
 import PokemonPage from '@/pages/PokemonPage.vue';
+import selectLanguage from '@/components/SelectLanguage.vue'
 
 export default {
   name: 'App',
   components: {
-    PokemonPage
+    PokemonPage,
+    selectLanguage
 }
 }
 </script>
