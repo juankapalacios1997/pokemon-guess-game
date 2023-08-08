@@ -2,7 +2,7 @@
     <div class="options-container">
         <ul>
             <li v-for="pokemon in pokemonOptions" :key="pokemon.id" @click="handleClick(pokemon.id)">{{ capitalizeFirstLetter(pokemon.name) }}</li>
-            <li class="button-li" @click="handleNewGame">New Game</li>
+            <li class="button-li" @click="handleNewGame">{{$t('new-game')}}</li>
         </ul>
     </div>
 </template>

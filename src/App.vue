@@ -1,5 +1,4 @@
 <template>
-  <selectLanguage />
   <PokemonPage />
 </template>
 
@@ -11,8 +10,7 @@ export default {
   name: 'App',
   components: {
     PokemonPage,
-    selectLanguage
-}
+  }
 }
 </script>
 

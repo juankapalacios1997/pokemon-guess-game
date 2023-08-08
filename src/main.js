@@ -5,12 +5,13 @@ import App from './App.vue'
 //import translations
 import en from "./locale/en"
 import es from "./locale/es"
+import fr from "./locale/fr"
 
 //config i18n
 const i18n = createI18n({
     locale: 'en',
     fallbackLocale: 'en',
-    messages: { en, es }
+    messages: { en, es, fr }
 })  
 
 import './css/styles.css'

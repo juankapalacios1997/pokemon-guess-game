@@ -1,0 +1,20 @@
+{
+    "main-message": "Qui est ce Pokemon?",
+    "please-wait": "Veuillez patienter",
+    "select-language": "Sélectionnez une langue",
+    "hit-messages": {
+        "message1": "Super! C'est ",
+        "message2": "Tu es doué pour ça! C'est ",
+        "message3": "Tu as raison! C'est ",
+        "message4": "Formidable! C'est ",
+        "message5": "Tu as le feu! C'est "
+    },
+    "miss-messages": {
+        "message1": "Tu étais si proche! C'est ",
+        "message2": "Tu y étais presque! C'est ",
+        "message3": "Avais presque raison! C'est ",
+        "message4": "Meilleure chance la prochaine fois! C'est ",
+        "message5": "N'abandonnez pas! C'est "
+    },
+    "new-game": "Nouveau jeu"
+}

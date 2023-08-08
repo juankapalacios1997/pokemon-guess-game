@@ -1,5 +1,7 @@
 {
     "main-message": "¿Quién es ese pokemon?",
+    "please-wait": "Por favor, espere",
+    "select-language": "Selecciona un idioma",
     "hit-messages": {
         "message1": "¡Genial! ¡Es ",
         "message2": "¡Eres bueno en esto! ¡Es ",
@@ -13,5 +15,6 @@
         "message3": "¡Casi le atinas! ¡Es ",
         "message4": "¡Suerte para la próxima! ¡Es ",
         "message5": "¡No te rindas! ¡Es "
-    }
+    },
+    "new-game": "Juego nuevo"
 }

@@ -1,5 +1,7 @@
 {
     "main-message": "Who's that Pokemon?",
+    "please-wait": "Please wait",
+    "select-language": "Select language",
     "hit-messages": {
         "message1": "Great! It's ",
         "message2": "You're really good at this! It's ",
@@ -12,6 +14,7 @@
         "message2": "You were gettin' hot! It's ",
         "message3": "Almost hit it! It's ",
         "message4": "Better luck next time! It's ",
-        "message5": "Don't you give up! It's "
-    }
+        "message5": "Don't give up! It's "
+    },
+    "new-game": "New game"
 }
