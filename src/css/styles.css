@@ -78,6 +78,7 @@ img {
 /* Pokemon Options */
 
 .options-container {
+    width: 66vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -119,6 +120,17 @@ li {
 .button-li button {
     background-color: transparent;
     border: none;
+}
+
+.counter {
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter p {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 li:hover {

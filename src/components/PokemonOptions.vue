@@ -30,7 +30,7 @@
         watch: {
             nameSelected: function(value) {
                 let name = this.capitalizeFirstLetter(value[0].name)
-                Array.from(this.liEles).filter(ele => { return ele.textContent === name})[0].style = this.isCorrect ? "background-color: rgb(50, 250, 50);" : "background-color: rgb(250, 50, 50);"
+                Array.from(this.liEles).filter(ele => { return ele.textContent === name})[0].style = this.isCorrect ? "background-color: rgb(100, 250, 100);" : "background-color: rgb(250, 100, 100);"
             }
         },
         methods: {

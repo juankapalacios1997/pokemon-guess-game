@@ -8,6 +8,10 @@
                 <PokemonPicture :pokemonName="pokemon.name" :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
                 <h2 v-if="showMessage" class="message">{{  message }}</h2>
                 <PokemonOptions :nameSelected="selectedPokemon" :isCorrect="isPokemonCorrect" :pokemonOptions="pokemonArr" @selection="handleSelection" @clickNewGame="newGame"/>
+                <div class="counter">
+                    <p>Tries: {{ allTries }}</p>
+                    <p>Tries: {{ points }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -33,6 +37,8 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 showPokemon: false,
                 showMessage: false,
                 message: '',
+                allTries: 0,
+                points: 0,
                 selectedPokemon: [],
                 isPokemonCorrect: false,
                 selectLanguage: true
@@ -56,8 +62,13 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                     this.$t('miss-messages.message4'),
                     this.$t('miss-messages.message5'),
                 ]
+            },
+            allTries() {
+                return this.allTries
+            },
+            goodTries() {
+                return this.goodTries
             }
-
         },
         methods: {
             async mixPokemonArr() {
@@ -71,10 +82,12 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 if(id === this.pokemon.id) {  
                     this.message = `${this.hitMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
                     this.isPokemonCorrect = true;
+                    this.points += 1
                 } else {
                     this.message = `${this.missMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
                     this.isPokemonCorrect = false;
                 }
+                this.allTries += 1
                 this.selectedPokemon = this.pokemonArr.filter(obj => { return obj.id == id })
                 this.showMessage = true
             },
