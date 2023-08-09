@@ -5,9 +5,9 @@
             <h1 v-if="!pokemon">{{$t('please-wait')}}</h1>
             <div v-else>
                 <h1>{{$t('main-message')}}</h1>
-                <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
+                <PokemonPicture :pokemonName="pokemon.name" :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
                 <h2 v-if="showMessage" class="message">{{  message }}</h2>
-                <PokemonOptions :pokemonOptions="pokemonArr" @selection="handleSelection" @clickNewGame="newGame"/>
+                <PokemonOptions :nameSelected="selectedPokemon" :isCorrect="isPokemonCorrect" :pokemonOptions="pokemonArr" @selection="handleSelection" @clickNewGame="newGame"/>
             </div>
         </div>
     </div>
@@ -33,6 +33,8 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 showPokemon: false,
                 showMessage: false,
                 message: '',
+                selectedPokemon: [],
+                isPokemonCorrect: false,
                 selectLanguage: true
             }
         },
@@ -68,9 +70,12 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 this.showPokemon = true;
                 if(id === this.pokemon.id) {  
                     this.message = `${this.hitMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
+                    this.isPokemonCorrect = true;
                 } else {
                     this.message = `${this.missMessages[Math.floor(Math.random() * 5)]}${this.pokemon.name}!`
+                    this.isPokemonCorrect = false;
                 }
+                this.selectedPokemon = this.pokemonArr.filter(obj => { return obj.id == id })
                 this.showMessage = true
             },
             newGame() {
@@ -78,6 +83,8 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                 this.showMessage = false;
                 this.pokemon = null;
                 this.pokemonArr = [];
+                this.selectedPokemon = [];
+                this.isPokemonCorrect = undefined;
                 this.mixPokemonArr()
             }
         },

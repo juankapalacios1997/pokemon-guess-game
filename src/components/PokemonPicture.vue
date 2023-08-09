@@ -5,7 +5,6 @@
             :src="imgSrc" 
             class="hidden-pokemon"
             alt="Pokemon"
-            @click="revealImage"
         />
         <img 
             v-else
