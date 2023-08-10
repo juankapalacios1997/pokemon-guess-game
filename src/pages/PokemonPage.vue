@@ -9,8 +9,8 @@
                 <h2 v-if="showMessage" class="message">{{  message }}</h2>
                 <PokemonOptions :nameSelected="selectedPokemon" :isCorrect="isPokemonCorrect" :pokemonOptions="pokemonArr" @selection="handleSelection" @clickNewGame="newGame"/>
                 <div class="counter">
-                    <p>Tries: {{ allTries }}</p>
-                    <p>Tries: {{ points }}</p>
+                    <p>{{$t('tries')}}: {{ allTries }}</p>
+                    <p>{{$t('points')}}: {{ points }}</p>
                 </div>
             </div>
         </div>
@@ -63,12 +63,6 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
                     this.$t('miss-messages.message5'),
                 ]
             },
-            allTries() {
-                return this.allTries
-            },
-            goodTries() {
-                return this.goodTries
-            }
         },
         methods: {
             async mixPokemonArr() {
@@ -103,7 +97,6 @@ import { getPokemonOptions } from '@/helpers/getPokemonOptions';
         },
         mounted() {
             this.mixPokemonArr()
-            this.pokemonId = Math.ceil(Math.random() * 100)
         }
     }
 </script>

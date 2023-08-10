@@ -16,5 +16,7 @@
         "message4": "Better luck next time! It's ",
         "message5": "Don't give up! It's "
     },
-    "new-game": "New game"
+    "new-game": "New game",
+    "tries": "Tries",
+    "points": "Points"
 }

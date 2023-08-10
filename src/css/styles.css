@@ -7,7 +7,7 @@ html, body {
     width: 100%;
 }
 
-.pokemon-container {
+.picture-container {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -16,5 +16,7 @@
         "message4": "¡Suerte para la próxima! ¡Es ",
         "message5": "¡No te rindas! ¡Es "
     },
-    "new-game": "Juego nuevo"
+    "new-game": "Juego nuevo",
+    "tries": "Intentos",
+    "points": "Puntos"
 }

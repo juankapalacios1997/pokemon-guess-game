@@ -1,5 +1,5 @@
 <template>
-    <div class="pokemon-container">
+    <div class="picture-container">
         <img
             v-if="!showPokemon" 
             :src="imgSrc" 

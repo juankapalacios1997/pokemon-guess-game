@@ -77,4 +77,17 @@ describe('PokemonOptions', () => {
 
     })
 
+    test('It should emit "selection" with it respective parameters on click', async() => {
+
+        const newGameBtn = wrapper.find(".button-li")
+        const handleNewGame = jest.spyOn(wrapper.vm, 'handleNewGame')
+
+        await newGameBtn.trigger('click')
+
+        expect(handleNewGame).toHaveBeenCalled()
+
+        expect(wrapper.emitted("clickNewGame")).toBeTruthy()
+
+    })
+
 })
